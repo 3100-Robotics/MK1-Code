@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team3100.robot.Drivetrain.Drive;
 import frc.team3100.robot.Drivetrain.DriveMotion;
+import frc.team3100.robot.Wall.WallExtend;
 
 
 public class Robot extends TimedRobot
@@ -15,20 +16,18 @@ public class Robot extends TimedRobot
 
     public static OI oi;
     public static Drive drive;
+    public static WallExtend wallextend;
 
 
     private Command autonomousCommand;
     private SendableChooser<Command> chooser = new SendableChooser<>();
 
-    /**
-     * This function is run when the robot is first started up and should be
-     * used for any initialization code.
-     */
     @Override
     public void robotInit()
     {
 
         drive = new Drive();
+        wallextend = new WallExtend();
 
 
         // ALWAYS INIT OI LAST

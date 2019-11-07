@@ -13,8 +13,8 @@ public class Drive extends Subsystem {
 
     DifferentialDrive differentialDrive = null;
 
-    double limitSpeed = 1;
-    double limitRotate = 1;
+    private double limitSpeed = 1;
+    private double limitRotate = 1;
 
     public Drive() {
         super("Drive");
@@ -29,7 +29,7 @@ public class Drive extends Subsystem {
         moveSpeed = deadband(moveSpeed);
         rotateSpeed = deadband(rotateSpeed);
 
-        limitSpeed = moveSpeed < 0 ? -0.8 : 0.8;
+        limitSpeed = moveSpeed < 0 ? -0.9 : 0.9;
         limitRotate = rotateSpeed < 0 ? -0.8 : 0.8;
 
         moveSpeed *= limitSpeed * moveSpeed;

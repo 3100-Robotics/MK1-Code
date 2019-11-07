@@ -1,11 +1,14 @@
 package frc.team3100.robot;
 
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Spark;
 
 public class RobotMap
 {
 
     public static int driveControlsChannel = 0;
+
+    private static int PCM1Channel = 41;
 
     //     D R I V E R   B U T T O N S
     //X B O X
@@ -32,10 +35,18 @@ public class RobotMap
     public static final int driveLeft1Channel = 1;
     public static final int driveRight1Channel = 2;
 
+    //Solenoids
+
+    private static int wallPistonChannel = 0;
+
+
+    //INIT
 
     public static XBoxStates driveControls = new XBoxStates(driveControlsChannel);
 
     public static Spark leftDriveMotor = new Spark(driveLeft1Channel);
     public static Spark rightDriveMotor = new Spark(driveRight1Channel);
+
+    public static Solenoid wallPiston = new Solenoid(41, 4);
 
 }

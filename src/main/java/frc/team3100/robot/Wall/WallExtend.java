@@ -1,6 +1,5 @@
 package frc.team3100.robot.Wall;
 
-import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team3100.robot.RobotMap;
 import frc.team3100.robot.XBoxStates;
@@ -15,15 +14,15 @@ public class WallExtend extends Command {
 
     protected void initialize(){
 
-        if(RobotMap.driveControls.getRightBumper()){
+   //     if(RobotMap.driveControls.getRightBumper()){
 
-            RobotMap.wallPiston.set(true);
+     //       RobotMap.wallPiston.set(true);
 
-        }else{
+     //   }else{
 
-            RobotMap.wallPiston.set(false);
+      //      RobotMap.wallPiston.set(false);
 
-        }
+    //    }
 
 
     }

@@ -1,10 +1,13 @@
 package frc.team3100.robot;
 
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.team3100.robot.Autonomous.AutoDrive;
+import frc.team3100.robot.Autonomous.AutonomousMaster;
 import frc.team3100.robot.Drivetrain.Drive;
 import frc.team3100.robot.Drivetrain.DriveMotion;
 import frc.team3100.robot.Wall.WallExtend;
@@ -13,6 +16,8 @@ import frc.team3100.robot.Wall.WallExtend;
 public class Robot extends TimedRobot
 {
 
+
+    public static double time = DriverStation.getInstance().getMatchTime();
 
     public static OI oi;
     public static Drive drive;
@@ -30,11 +35,12 @@ public class Robot extends TimedRobot
         wallextend = new WallExtend();
 
 
+        autonomousCommand = new AutonomousMaster();
         // ALWAYS INIT OI LAST
         oi = new OI();
 
-        chooser.addDefault("Default Auto", new DriveMotion());
-        // chooser.addObject("My Auto", new MyAutoCommand());
+        chooser.setDefaultOption("Auto Master", new AutonomousMaster());
+        chooser.addOption("Teleop Drive", new DriveMotion());
         SmartDashboard.putData("Auto mode", chooser);
     }
 
@@ -55,17 +61,7 @@ public class Robot extends TimedRobot
         Scheduler.getInstance().run();
     }
 
-    /**
-     * This autonomous (along with the chooser code above) shows how to select
-     * between different autonomous modes using the dashboard. The sendable
-     * chooser code works with the Java SmartDashboard. If you prefer the
-     * LabVIEW Dashboard, remove all of the chooser code and uncomment the
-     * getString code to get the auto name from the text box below the Gyro
-     *
-     * <p>You can add additional auto modes by adding additional commands to the
-     * chooser code above (like the commented example) or additional comparisons
-     * to the switch structure below with additional strings & commands.
-     */
+
     @Override
     public void autonomousInit()
     {
@@ -77,6 +73,7 @@ public class Robot extends TimedRobot
          * = new MyAutoCommand(); break; case "Default Auto": default:
          * autonomousCommand = new ExampleCommand(); break; }
          */
+
 
         // schedule the autonomous command (example)
         if (autonomousCommand != null)

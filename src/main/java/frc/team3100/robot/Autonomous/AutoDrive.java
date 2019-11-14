@@ -28,13 +28,13 @@ public class AutoDrive extends Command {
     protected void execute() {
 
                 drive.arcadeDrive(1, 0);
-                time += 1;
+                Robot.time += 1;
 
    }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        if(time > 100){
+        if(Robot.time > 100){
             return true;
         }else{
             return false;

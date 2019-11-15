@@ -6,11 +6,10 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team3100.robot.Autonomous.AutoDrive;
 import frc.team3100.robot.Autonomous.AutonomousMaster;
 import frc.team3100.robot.Drivetrain.Drive;
 import frc.team3100.robot.Drivetrain.DriveMotion;
-import frc.team3100.robot.Wall.WallExtend;
+import frc.team3100.robot.Commands.WallExtend;
 
 
 public class Robot extends TimedRobot
@@ -18,6 +17,10 @@ public class Robot extends TimedRobot
 
 
     public static double time = DriverStation.getInstance().getMatchTime();
+
+    //If mode = 1, Arcade
+    //If mode = 2, Tank
+    public static double mode = 1;
 
     public static OI oi;
     public static Drive drive;

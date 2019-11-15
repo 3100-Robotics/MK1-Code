@@ -20,15 +20,14 @@ public class DriveMotion extends Command {
     @Override
     protected void execute() {
 
-        double mode = 1;
 
-            if (mode == 1) {
+            if (Robot.mode == 1) {
                 //Arcade Drive
                 Robot.drive.arcadeDrive(RobotMap.driveControls.getLeftStickY(), -RobotMap.driveControls.getRightStickX());
             }
 
 
-            else if (mode == 2) {
+            else if (Robot.mode == 2) {
                 //Tank Drive
                 Robot.drive.tankDrive(RobotMap.driveControls.getLeftStickY(), RobotMap.driveControls.getRightStickY());
 

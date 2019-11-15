@@ -34,6 +34,9 @@ public class RobotMap
     //Sparks
     public static final int driveLeft1Channel = 1;
     public static final int driveRight1Channel = 2;
+    public static final int auxMotorChannel = 3;
+    public static final int auxMotorChannel2 = 4;
+
 
     //Solenoids
 
@@ -46,6 +49,8 @@ public class RobotMap
 
     public static Spark leftDriveMotor = new Spark(driveLeft1Channel);
     public static Spark rightDriveMotor = new Spark(driveRight1Channel);
+    public static Spark auxMotor = new Spark(auxMotorChannel);
+    public static Spark auxMotor2 = new Spark(auxMotorChannel2);
 
     public static Solenoid wallPiston = new Solenoid(41, 4);
 

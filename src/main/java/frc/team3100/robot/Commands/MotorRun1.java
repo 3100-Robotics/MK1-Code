@@ -16,7 +16,7 @@ public class MotorRun1 extends Command {
 
             RobotMap.auxMotor.set(0.25);
             RobotMap.auxMotor2.set(0.25);
-
+//T
         }
 
     }

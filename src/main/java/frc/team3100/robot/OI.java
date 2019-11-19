@@ -5,16 +5,15 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.team3100.robot.Autonomous.AutoDrive;
 import frc.team3100.robot.Commands.MotorRun;
+import frc.team3100.robot.Commands.MotorRun1;
 import frc.team3100.robot.Commands.WallExtend;
 
-public class OI
-{
+public class OI {
 
-Button piston = new JoystickButton(RobotMap.driveControls, RobotMap.rightBumperChannel);
-Button driveAuto = new JoystickButton(RobotMap.driveControls, RobotMap.leftBumperChannel);
-Button motorRun = new JoystickButton(RobotMap.driveControls, RobotMap.bButtonChannel);
-
-
+    Button piston = new JoystickButton(RobotMap.driveControls, RobotMap.rightBumperChannel);
+  //  Button driveAuto = new JoystickButton(RobotMap.driveControls, RobotMap.leftBumperChannel);
+    Button motorRun = new JoystickButton(RobotMap.driveControls, RobotMap.bButtonChannel);
+    Button motorRun1 = new JoystickButton(RobotMap.driveControls, RobotMap.yButtonChannel);
 
 
     // Joystick stick = new Joystick(port);
@@ -26,11 +25,13 @@ Button motorRun = new JoystickButton(RobotMap.driveControls, RobotMap.bButtonCha
 
     // button.whenReleased(new ExampleCommand());
 
-    public OI(){
+    public OI() {
 
-    piston.whenPressed(new WallExtend());
-    driveAuto.whenPressed(new AutoDrive());
-    motorRun.whenPressed(new MotorRun());
+        piston.whenPressed(new WallExtend());
+    //    driveAuto.whenPressed(new AutoDrive());
+        motorRun.whenPressed(new MotorRun());
+        motorRun1.whenPressed(new MotorRun1());
+
 
     }
 

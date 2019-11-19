@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a180812-c5fb-47ea-9508-0bccc63fac44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MotorRun.java" afterDir="false" />
+    <list default="true" id="7a180812-c5fb-47ea-9508-0bccc63fac44" name="Default Changelist" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/spenc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MotorRun1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -11,16 +12,29 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Autonomous/AutoDrive.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Autonomous/AutoDrive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Autonomous/AutonomousMaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Autonomous/AutonomousMaster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/MotorRun.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/MotorRun.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/WallExtend.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/WallExtend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/Drive.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/Drive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/DriveMotion.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/DriveMotion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/OI.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/OI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Robot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/RobotMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/RobotMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Wall/WallExtend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/XBoxStates.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/XBoxStates.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/MK1-Code.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/MK1-Code.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDrive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutonomousMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutonomousMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MotorRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MotorRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/WallExtend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/WallExtend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/Drive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/Drive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/DriveMotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/DriveMotion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/OI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/OI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Robot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/RobotMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/RobotMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Wall/WallExtend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/WallExtend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/XBoxStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/XBoxStates.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +113,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MK1-Code [build]">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="frc.team3100.robot.Main" />
+      <module name="main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="frc.team3100.robot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MK1-Code [bui.d]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -177,6 +204,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.MK1-Code [build]" />
         <item itemvalue="Gradle.MK1-Code [bui.d]" />
         <item itemvalue="Gradle.MK1-Code [gradlew build]" />

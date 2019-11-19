@@ -9,14 +9,11 @@ import static frc.team3100.robot.Robot.drive;
 
 public class AutoDrive extends Command {
 
-
-
-
-
+    //Constructor for AutoDrive, takes in the drive subsystem and writes a time to the smartdashboard
     public AutoDrive() {
         super("AutoDrive");
         requires(drive);
-        SmartDashboard.putNumber("Time", Robot.time);
+     //   SmartDashboard.putNumber("Time", Robot.time);
     }
 
     // Called just before this Command runs the first time
@@ -27,16 +24,20 @@ public class AutoDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
 
-                drive.arcadeDrive(1, 0);
-                Robot.time += 1;
+        if (Robot.mode == 1) {
+            drive.arcadeDrive(1, 0);
+        } else if (Robot.mode == 2) {
+            drive.tankDrive(1, 1);
+        }
+        Robot.time += 1;
 
-   }
+    }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        if(Robot.time > 100){
+        if (Robot.time > 100) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }

@@ -9,54 +9,74 @@ Makes the Xbox controller's inputs far more manageable for the rest of the progr
 public class XBoxStates extends Joystick {
 
     public XBoxStates(int port) {
-            super(port);
-        }
+        super(port);
+    }
 
-        // set up methods to retrieve the values from variable inputs on the controller.
+    // set up methods to retrieve the values from variable inputs on the controller.
 
-        public double getRightStickX() {
-            return getRawAxis(RobotMap.rightXAxisChannel);
-        }
-        public double getRightStickY() {
-            return getRawAxis(RobotMap.rightYAxisChannel);
-        }
-        public double getLeftStickX() {
-            return getRawAxis(RobotMap.leftXAxisChannel);
-        }
-        public double getLeftStickY() {
-            return getRawAxis(RobotMap.leftYAxisChannel);
-        }
+    public double getRightStickX() {
+        return getRawAxis(RobotMap.rightXAxisChannel);
+    }
 
-        public boolean getButtonA() {
-            return getRawButton(RobotMap.aButtonChannel);
-        }
-        public boolean getButtonB() {
-            return getRawButton(RobotMap.bButtonChannel);
-        }
-        public boolean getButtonX() {
-            return getRawButton(RobotMap.xButtonChannel);
-        }
-        public boolean getButtonY() {
-            return getRawButton(RobotMap.yButtonChannel);
-        }
+    public double getRightStickY() {
+        return getRawAxis(RobotMap.rightYAxisChannel);
+    }
 
-        public boolean getRightBumper() {
-            return getRawButton(RobotMap.rightBumperChannel);
-        }
-        public boolean getLeftBumper() {
-            return getRawButton(RobotMap.leftBumperChannel);
-        }
-        public double getRightTrigger() {
-            return getRawAxis(RobotMap.rightTriggerChannel);
-        }
-        public double getLeftTrigger() { return getRawAxis(RobotMap.leftTriggerChannel); }
+    public double getLeftStickX() {
+        return getRawAxis(RobotMap.leftXAxisChannel);
+    }
 
-        public boolean getPOVD() { return (getPOV() == 270); }
-        public boolean getPOVL() { return (getPOV() == 180); }
-        public boolean getPOVR() { return (getPOV() == 0); }
-        public boolean getPOVU() { return (getPOV() == 90); }
+    public double getLeftStickY() {
+        return getRawAxis(RobotMap.leftYAxisChannel);
+    }
 
+    public boolean getButtonA() {
+        return getRawButton(RobotMap.aButtonChannel);
+    }
 
+    public boolean getButtonB() {
+        return getRawButton(RobotMap.bButtonChannel);
+    }
+
+    public boolean getButtonX() {
+        return getRawButton(RobotMap.xButtonChannel);
+    }
+
+    public boolean getButtonY() {
+        return getRawButton(RobotMap.yButtonChannel);
+    }
+
+    public boolean getRightBumper() {
+        return getRawButton(RobotMap.rightBumperChannel);
+    }
+
+    public boolean getLeftBumper() {
+        return getRawButton(RobotMap.leftBumperChannel);
+    }
+
+    public double getRightTrigger() {
+        return getRawAxis(RobotMap.rightTriggerChannel);
+    }
+
+    public double getLeftTrigger() {
+        return getRawAxis(RobotMap.leftTriggerChannel);
+    }
+
+    public boolean getPOVD() {
+        return (getPOV() == 270);
+    }
+
+    public boolean getPOVL() {
+        return (getPOV() == 180);
+    }
+
+    public boolean getPOVR() {
+        return (getPOV() == 0);
+    }
+
+    public boolean getPOVU() {
+        return (getPOV() == 90);
+    }
 
 
 }

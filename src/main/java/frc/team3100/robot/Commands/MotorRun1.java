@@ -3,7 +3,7 @@ package frc.team3100.robot.Commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team3100.robot.RobotMap;
 
-public class MotorRun extends Command {
+public class MotorRun1 extends Command {
 
     protected void initialize() {
 
@@ -12,15 +12,10 @@ public class MotorRun extends Command {
     //Testing command to run motors
     protected void execute() {
 
-        if (RobotMap.driveControls.getButtonB()) {
+        if (RobotMap.driveControls.getButtonY()) {
 
-            RobotMap.auxMotor.set(-1);
-            RobotMap.auxMotor2.set(-1);
-
-        } else {
-
-            RobotMap.auxMotor.set(0);
-            RobotMap.auxMotor2.set(0);
+            RobotMap.auxMotor.set(0.25);
+            RobotMap.auxMotor2.set(0.25);
 
         }
 
@@ -31,3 +26,5 @@ public class MotorRun extends Command {
         return false;
     }
 }
+
+

@@ -1,8 +1,11 @@
 package frc.team3100.robot.Drivetrain;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.team3100.robot.Robot;
 import frc.team3100.robot.RobotMap;
 
 import static frc.team3100.robot.RobotMap.leftDriveMotor;
@@ -11,7 +14,7 @@ import static frc.team3100.robot.RobotMap.rightDriveMotor;
 
 public class Drive extends Subsystem {
 
-    DifferentialDrive differentialDrive = null;
+     DifferentialDrive differentialDrive = null;
 
     private double limitSpeed = 1;
     private double limitRotate = 1;
@@ -20,12 +23,18 @@ public class Drive extends Subsystem {
         super("Drive");
 
         differentialDrive = new DifferentialDrive(leftDriveMotor, rightDriveMotor);
-
-
     }
 
+    //Arcade Drive, one Joystick controls forwards/backwards, the other controls turning
     public void arcadeDrive(double moveSpeed, double rotateSpeed) {
 
+
+       // DriverStation ds = DriverStation.getInstance();
+       // double time = ds.getMatchTime();
+       // System.out.println(time);
+       // SmartDashboard.putNumber("Time", time);
+
+        //Limits for speed, using quadratics and max/min
         moveSpeed = deadband(moveSpeed);
         rotateSpeed = deadband(rotateSpeed);
 
@@ -37,13 +46,13 @@ public class Drive extends Subsystem {
 
         moveSpeed = Math.pow(moveSpeed, 3);
 
+        //Tells the program to run the driveArcade
         differentialDrive.arcadeDrive(moveSpeed, rotateSpeed);
 
 
     }
-
-    public void tankDrive(double leftSpeed, double rightSpeed){
-
+    //Tank Drive, one Joystick controls the left, one controls the right.
+    public void tankDrive(double leftSpeed, double rightSpeed) {
 
 
         leftSpeed = deadband(leftSpeed);
@@ -52,36 +61,25 @@ public class Drive extends Subsystem {
         limitSpeed = leftSpeed < 0 ? -0.8 : 0.8;
         limitRotate = rightSpeed < 0 ? -0.8 : 0.8;
 
-        leftSpeed *= limitSpeed *leftSpeed;
+        leftSpeed *= limitSpeed * leftSpeed;
         rightSpeed *= limitRotate * rightSpeed;
 
-        differentialDrive.tankDrive(leftSpeed, rightSpeed);
+//        differentialDrive.tankDrive(leftSpeed, rightSpeed);
 
     }
 
+    //The command won't work if you only bump the stick a little, a deadband in the middle
     private double deadband(double input) {
-        if(Math.abs(input) < 0.2) {
+        if (Math.abs(input) < 0.2) {
             return 0;
         } else {
             return input;
         }
     }
 
-    protected void initialize() {}
-
-    protected void execute() {}
-
-
-    protected boolean isFinished() {
-        // TODO: Make this return true when this Command no longer needs to run execute()
-        return false;
-    }
-
+    //Sets the default on startup command to be DriveMotion
     public void initDefaultCommand() {
         setDefaultCommand(new DriveMotion());
     }
 
-    protected void end() {
-
-    }
 }

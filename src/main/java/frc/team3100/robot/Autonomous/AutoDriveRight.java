@@ -1,23 +1,28 @@
 package frc.team3100.robot.Autonomous;
 
-import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team3100.robot.Robot;
 
 import static frc.team3100.robot.Robot.drive;
 
-public class AutoDrive extends Command {
+public class AutoDriveRight extends Command {
+
+    protected double endTime;
+    double driveTime;
+    boolean stop;
 
     //Constructor for AutoDrive, takes in the drive subsystem and writes a time to the smartdashboard
-    public AutoDrive() {
-        super("AutoDrive");
+    public AutoDriveRight(double seconds) {
+        super("AutoDriveRight");
         requires(drive);
-     //   SmartDashboard.putNumber("Time", Robot.time);
+        driveTime = seconds;
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
+
+
+        endTime = Robot.time + driveTime;
 
     }
 
@@ -25,17 +30,23 @@ public class AutoDrive extends Command {
     protected void execute() {
 
         if (Robot.mode == 1) {
-            drive.arcadeDrive(1, 0);
+            if(Robot.time > endTime) {
+                drive.arcadeDrive(0, 1);
+                stop = true;
+            }
+
         } else if (Robot.mode == 2) {
-            drive.tankDrive(1, 1);
+            if(Robot.time > endTime) {
+                drive.tankDrive(1, 0);
+                stop = true;
+            }
         }
-        Robot.time += 1;
 
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        if (Robot.time > 100) {
+        if (stop == true) {
             return true;
         } else {
             return false;

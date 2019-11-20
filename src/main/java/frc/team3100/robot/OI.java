@@ -3,7 +3,6 @@ package frc.team3100.robot;
 
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.team3100.robot.Autonomous.AutoDrive;
 import frc.team3100.robot.Commands.MotorRun;
 import frc.team3100.robot.Commands.MotorRun1;
 import frc.team3100.robot.Commands.WallExtend;
@@ -27,7 +26,9 @@ public class OI {
 
     public OI() {
 
-        piston.whenPressed(new WallExtend());
+        piston.toggleWhenPressed(new WallExtend());
+
+
     //    driveAuto.whenPressed(new AutoDrive());
         motorRun.whenPressed(new MotorRun());
         motorRun1.whenPressed(new MotorRun1());

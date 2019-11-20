@@ -16,8 +16,12 @@ public class Drive extends Subsystem {
 
      DifferentialDrive differentialDrive = null;
 
+
     private double limitSpeed = 1;
     private double limitRotate = 1;
+
+    public int storedValLeft = 0;
+    public int storedValRight = 0;
 
     public Drive() {
         super("Drive");

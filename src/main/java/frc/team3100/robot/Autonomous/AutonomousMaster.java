@@ -7,7 +7,8 @@ public class AutonomousMaster extends CommandGroup {
     //Master grouping for all of the autonomous commands
     public AutonomousMaster(){
 
-            addSequential(new AutoDrive());
+            addSequential(new AutoDriveForward(5));
+
 
     }
 

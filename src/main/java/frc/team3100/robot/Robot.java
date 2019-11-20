@@ -2,6 +2,7 @@ package frc.team3100.robot;
 
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -11,12 +12,17 @@ import frc.team3100.robot.Drivetrain.Drive;
 import frc.team3100.robot.Drivetrain.DriveMotion;
 import frc.team3100.robot.Commands.WallExtend;
 
+import static edu.wpi.first.wpilibj.Timer.getMatchTime;
+
+
 
 public class Robot extends TimedRobot {
 
 
-   // public static double time = DriverStation.getInstance().getMatchTime();
-        public static double time = 0;
+    public static double time = Timer.getMatchTime();
+
+
+       // public static double time = 0;
 
     //If mode = 1, Arcade
     //If mode = 2, Tank
@@ -25,6 +31,7 @@ public class Robot extends TimedRobot {
     public static OI oi;
     public static Drive drive;
     public static WallExtend wallextend;
+
 
 
     private Command autonomousCommand;
@@ -66,6 +73,7 @@ public class Robot extends TimedRobot {
     public void autonomousInit() {
         autonomousCommand = chooser.getSelected();
 
+        time = DriverStation.getInstance().getMatchTime();
         /*
          * String autoSelected = SmartDashboard.getString("Auto Selector",
          * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
@@ -85,7 +93,13 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void autonomousPeriodic() {
+
+        time = DriverStation.getInstance().getMatchTime();
+        SmartDashboard.putNumber("Time", Robot.time);
+        System.out.println(time);
+
         Scheduler.getInstance().run();
+
     }
 
     @Override

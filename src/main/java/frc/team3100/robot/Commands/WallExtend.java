@@ -6,9 +6,12 @@ import frc.team3100.robot.XBoxStates;
 
 public class WallExtend extends Command {
 
+
+
     public WallExtend() {
         super("WallExtend");
     }
+
 
 
     protected void initialize() {
@@ -18,16 +21,14 @@ public class WallExtend extends Command {
     //Testing command to run pneumatics
     protected void execute() {
 
-        //Add two state variables to keep wall up/down
-        if (RobotMap.driveControls.getRightBumper()) {
+            RobotMap.wallPiston.set(true);
 
-           // RobotMap.wallPiston.set(true);
+    }
 
-        } else {
+    @Override
+    protected void interrupted() {
 
-       //     RobotMap.wallPiston.set(false);
-
-        }
+        RobotMap.wallPiston.set(false);
 
     }
 

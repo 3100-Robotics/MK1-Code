@@ -30,7 +30,7 @@ public class Robot extends TimedRobot {
 
     public static OI oi;
     public static Drive drive;
-    public static WallExtend wallextend;
+  //  public static WallExtend wallextend;
 
 
 
@@ -41,7 +41,7 @@ public class Robot extends TimedRobot {
     public void robotInit() {
 
         drive = new Drive();
-        wallextend = new WallExtend();
+     //   wallextend = new WallExtend();
 
 
         autonomousCommand = new AutonomousMaster();

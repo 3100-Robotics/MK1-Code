@@ -5,9 +5,10 @@ import edu.wpi.first.wpilibj.Spark;
 
 public class RobotMap {
 
+    //Joystick
+
     public static int driveControlsChannel = 0;
 
-    private static int PCM1Channel = 41;
 
     //     D R I V E R   B U T T O N S
     //X B O X
@@ -39,7 +40,9 @@ public class RobotMap {
 
     //Solenoids
 
-    private static int wallPistonChannel = 0;
+
+    private static int PCM1Channel = 41;
+    private static int pistonChannel1 = 4;
 
 
     //INIT
@@ -51,6 +54,7 @@ public class RobotMap {
     public static Spark auxMotor = new Spark(auxMotorChannel);
     public static Spark auxMotor2 = new Spark(auxMotorChannel2);
 
-    public static Solenoid wallPiston = new Solenoid(41, 4);
+    public static Solenoid wallPiston = new Solenoid(pistonChannel1);
+
 
 }

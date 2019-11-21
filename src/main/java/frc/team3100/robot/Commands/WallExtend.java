@@ -28,7 +28,7 @@ public class WallExtend extends Command {
     @Override
     protected void interrupted() {
 
-        RobotMap.wallPiston.set(false);
+            RobotMap.wallPiston.set(false);
 
     }
 

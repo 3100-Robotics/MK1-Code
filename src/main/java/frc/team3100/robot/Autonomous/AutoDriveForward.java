@@ -25,6 +25,9 @@ public class AutoDriveForward extends Command {
     protected void initialize() {
 
         endTime = Timer.getMatchTime() + driveTime;
+        //System.out.println(endTime);
+   //     System.out.println(driveTime);
+        System.out.println("Test");
 
     }
 
@@ -33,13 +36,13 @@ public class AutoDriveForward extends Command {
 
 
         if (Robot.mode == 1) {
-            if(Timer.getMatchTime() > endTime) {
+            if(Timer.getMatchTime() < endTime) {
                 drive.arcadeDrive(1, 0);
                 stop = true;
             }
 
         } else if (Robot.mode == 2) {
-            if(Robot.time > endTime) {
+            if(Robot.time < endTime) {
                 drive.tankDrive(1, 1);
                 stop = true;
             }

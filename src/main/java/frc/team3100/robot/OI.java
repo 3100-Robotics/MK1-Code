@@ -9,10 +9,10 @@ import frc.team3100.robot.Commands.WallExtend;
 
 public class OI {
 
-    Button piston = new JoystickButton(RobotMap.driveControls, RobotMap.rightBumperChannel);
+    Button piston = new JoystickButton(RobotMap.techControls, RobotMap.rightBumperChannel);
   //  Button driveAuto = new JoystickButton(RobotMap.driveControls, RobotMap.leftBumperChannel);
-    Button motorRun = new JoystickButton(RobotMap.driveControls, RobotMap.bButtonChannel);
-    Button motorRun1 = new JoystickButton(RobotMap.driveControls, RobotMap.yButtonChannel);
+    Button motorRun = new JoystickButton(RobotMap.techControls, RobotMap.bButtonChannel);
+    Button motorRun1 = new JoystickButton(RobotMap.techControls, RobotMap.yButtonChannel);
 
 
     // Joystick stick = new Joystick(port);

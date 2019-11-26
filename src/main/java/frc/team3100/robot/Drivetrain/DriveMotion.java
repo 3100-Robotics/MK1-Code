@@ -1,5 +1,6 @@
 package frc.team3100.robot.Drivetrain;
 
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team3100.robot.Robot;
@@ -7,6 +8,10 @@ import frc.team3100.robot.RobotMap;
 
 //DriveMotion is a command that is used to run the drivetrain
 public class DriveMotion extends Command {
+
+    public double time;
+    public double time2;
+
     public DriveMotion() {
         super("DriveMotion");
         requires(Robot.drive);
@@ -21,10 +26,18 @@ public class DriveMotion extends Command {
     @Override
     protected void execute() {
 
+
+        time -= DriverStation.getInstance().getMatchTime();
+        time2 = (time * 20) / 1000;
+
+       // System.out.println((time * 20) / 1000);
+        System.out.println(time2);
+
+
         //Checks to see the mode set in Robot, then sets the controls for the Robot
         if (Robot.mode == 1) {
             //Arcade Drive
-            Robot.drive.arcadeDrive(RobotMap.driveControls.getLeftStickY(), -RobotMap.driveControls.getRightStickX());
+            Robot.drive.arcadeDrive(-RobotMap.driveControls.getLeftStickY(), -RobotMap.driveControls.getRightStickX());
         } else if (Robot.mode == 2) {
             //Tank Drive
             Robot.drive.tankDrive(RobotMap.driveControls.getLeftStickY(), RobotMap.driveControls.getRightStickY());

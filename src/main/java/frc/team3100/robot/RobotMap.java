@@ -8,6 +8,7 @@ public class RobotMap {
     //Joystick
 
     public static int driveControlsChannel = 0;
+    public static int techControlsChannel = 1;
 
 
     //     D R I V E R   B U T T O N S
@@ -48,13 +49,14 @@ public class RobotMap {
     //INIT
 
     public static XBoxStates driveControls = new XBoxStates(driveControlsChannel);
+    public static XBoxStates techControls = new XBoxStates(techControlsChannel);
 
     public static Spark leftDriveMotor = new Spark(driveLeft1Channel);
     public static Spark rightDriveMotor = new Spark(driveRight1Channel);
     public static Spark auxMotor = new Spark(auxMotorChannel);
     public static Spark auxMotor2 = new Spark(auxMotorChannel2);
 
-    public static Solenoid wallPiston = new Solenoid(pistonChannel1);
+    public static Solenoid wallPiston = new Solenoid( 41, pistonChannel1);
 
 
-}
+        }

@@ -32,12 +32,6 @@ public class Drive extends Subsystem {
     //Arcade Drive, one Joystick controls forwards/backwards, the other controls turning
     public void arcadeDrive(double moveSpeed, double rotateSpeed) {
 
-
-       // DriverStation ds = DriverStation.getInstance();
-       // double time = ds.getMatchTime();
-       // System.out.println(time);
-       // SmartDashboard.putNumber("Time", time);
-
         //Limits for speed, using quadratics and max/min
         moveSpeed = deadband(moveSpeed);
         rotateSpeed = deadband(rotateSpeed);

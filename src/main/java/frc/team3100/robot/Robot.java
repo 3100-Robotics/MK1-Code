@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.team3100.robot.Autonomous.AutoDriveForward;
 import frc.team3100.robot.Autonomous.AutonomousMaster;
 import frc.team3100.robot.Drivetrain.Drive;
 import frc.team3100.robot.Drivetrain.DriveMotion;
@@ -17,10 +18,6 @@ import static edu.wpi.first.wpilibj.Timer.getMatchTime;
 
 
 public class Robot extends TimedRobot {
-
-
-    public static double time = Timer.getMatchTime();
-
 
        // public static double time = 0;
 
@@ -73,7 +70,6 @@ public class Robot extends TimedRobot {
     public void autonomousInit() {
         autonomousCommand = chooser.getSelected();
 
-        time = DriverStation.getInstance().getMatchTime();
         /*
          * String autoSelected = SmartDashboard.getString("Auto Selector",
          * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
@@ -94,9 +90,8 @@ public class Robot extends TimedRobot {
     @Override
     public void autonomousPeriodic() {
 
-        time = DriverStation.getInstance().getMatchTime();
-        SmartDashboard.putNumber("Time", Robot.time);
-        System.out.println(time);
+
+
 
         Scheduler.getInstance().run();
 

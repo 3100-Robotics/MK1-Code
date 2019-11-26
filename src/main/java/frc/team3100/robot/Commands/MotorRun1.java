@@ -12,7 +12,7 @@ public class MotorRun1 extends Command {
     //Testing command to run motors
     protected void execute() {
 
-        if (RobotMap.driveControls.getButtonY()) {
+        if (RobotMap.techControls.getButtonY()) {
 
             RobotMap.auxMotor.set(0.25);
             RobotMap.auxMotor2.set(0.25);

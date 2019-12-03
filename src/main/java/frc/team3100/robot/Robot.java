@@ -1,5 +1,9 @@
 package frc.team3100.robot;
 
+import edu.wpi.cscore.CvSink;
+import edu.wpi.cscore.CvSource;
+import edu.wpi.cscore.UsbCamera;
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
@@ -12,6 +16,8 @@ import frc.team3100.robot.Autonomous.AutonomousMaster;
 import frc.team3100.robot.Drivetrain.Drive;
 import frc.team3100.robot.Drivetrain.DriveMotion;
 import frc.team3100.robot.Commands.WallExtend;
+import org.opencv.core.Mat;
+import org.opencv.imgproc.Imgproc;
 
 import static edu.wpi.first.wpilibj.Timer.getMatchTime;
 
@@ -38,8 +44,25 @@ public class Robot extends TimedRobot {
     public void robotInit() {
 
         drive = new Drive();
-     //   wallextend = new WallExtend();
+        CameraServer.getInstance().startAutomaticCapture();
 
+       /* new Thread(() -> {
+            UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
+            camera.setResolution(640, 480);
+
+            CvSink cvSink = CameraServer.getInstance().getVideo();
+            CvSource outputStream = CameraServer.getInstance().putVideo("Blur", 640, 480);
+
+            Mat source = new Mat();
+            Mat output = new Mat();
+
+            while(!Thread.interrupted()) {
+                cvSink.grabFrame(source);
+                Imgproc.cvtColor(source, output, Imgproc.COLOR_BGR2GRAY);
+                outputStream.putFrame(output);
+            }
+        }).start();
+*/
 
         autonomousCommand = new AutonomousMaster();
         // ALWAYS INIT OI LAST

@@ -1,9 +1,12 @@
 package frc.team3100.robot.Commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import frc.team3100.robot.Drivetrain.Drive;
 import frc.team3100.robot.OI;
 import frc.team3100.robot.Robot;
 import frc.team3100.robot.RobotMap;
+
+import static frc.team3100.robot.Robot.drive;
 
 
 public class MotorRun extends Command {
@@ -26,6 +29,7 @@ public class MotorRun extends Command {
 
             RobotMap.auxMotor.set(0.4);
             RobotMap.auxMotor2.set(0.4);
+
 
         }else if (RobotMap.techControls.getButtonY()) {
 

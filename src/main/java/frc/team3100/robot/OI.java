@@ -1,9 +1,11 @@
 package frc.team3100.robot;
 
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.team3100.robot.Commands.MotorRun;
+import frc.team3100.robot.Commands.MoveBackwards;
 import frc.team3100.robot.Commands.WallExtend;
 
 public class OI {
@@ -14,6 +16,7 @@ public class OI {
     Button motorRun = new JoystickButton(RobotMap.techControls, RobotMap.bButtonChannel);
     Button motorRun1 = new JoystickButton(RobotMap.techControls, RobotMap.yButtonChannel);
     Button motorRun2 = new JoystickButton(RobotMap.techControls, RobotMap.xButtonChannel);
+    Button moveBackwards = new JoystickButton(RobotMap.techControls, RobotMap.aButtonChannel);
 
 
     public static boolean motorRan = false;
@@ -33,6 +36,7 @@ public class OI {
         motorRun.whenPressed(new MotorRun());
         motorRun1.whenPressed(new MotorRun());
         motorRun2.whenPressed(new MotorRun());
+        moveBackwards.whenPressed(new MoveBackwards());
 
 
     }

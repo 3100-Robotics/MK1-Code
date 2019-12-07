@@ -2,47 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a180812-c5fb-47ea-9508-0bccc63fac44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/DriveStraightForXAtY.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/GroupChooser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Groups/Group1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Groups/Group2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Groups/Group3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Groups/Group4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MoveBackwards.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Autonomous/AutonomousMaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Autonomous/AutonomousMaster.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/MotorRun.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/MotorRun.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/MotorRun1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/WallExtend.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/WallExtend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/Drive.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/Drive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/DriveMotion.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/DriveMotion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/OI.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/OI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Robot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/MK1-Code.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/MK1-Code.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveBackward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveBackwards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveForward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveForward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveLeft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveRight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutonomousMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutonomousMaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MotorRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MotorRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MotorRun1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/WallExtend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/WallExtend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/Drive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/Drive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/DriveMotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/DriveMotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/GroupChooser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Groups/Group1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Groups/Group2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Groups/Group3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Groups/Group4.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/OI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/OI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Robot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/RobotMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/RobotMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575410586658</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added Auton features v1">
+      <created>1575748541410</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1575748541410</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -363,37 +341,42 @@
     <MESSAGE value="Fixing Pneumatics" />
     <MESSAGE value="Adding Auton and Drive Controls" />
     <MESSAGE value="Adding Camera" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Camera" />
+    <MESSAGE value="Added Auton features v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Auton features v1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1575497653809">
+    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1575753026859">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1575497653809" />
+    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1575753026859" />
     <state x="690" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575742105525">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575742105525" />
-    <state x="644" y="137" key="CommitChangelistDialog2" timestamp="1575410585538">
+    <state x="644" y="137" key="CommitChangelistDialog2" timestamp="1575748540225">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="644" y="137" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1575410585538" />
+    <state x="644" y="137" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1575748540225" />
     <state x="740" y="296" key="FileChooserDialogImpl" timestamp="1575496302616">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="296" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575496302616" />
-    <state x="552" y="263" key="Vcs.Push.Dialog.v2" timestamp="1575410591845">
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2" timestamp="1575748552002">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1575410591845" />
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1575748552002" />
     <state x="675" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1575581816939">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="675" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575581816939" />
-    <state x="702" y="172" key="refactoring.ChangeSignatureDialog" timestamp="1575748450742">
+    <state x="702" y="172" key="refactoring.ChangeSignatureDialog" timestamp="1575750241389">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="702" y="172" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575748450742" />
+    <state x="702" y="172" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575750241389" />
+    <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1575751013630">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575751013630" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

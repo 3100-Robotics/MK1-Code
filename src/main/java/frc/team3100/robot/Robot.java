@@ -18,37 +18,11 @@ import frc.team3100.robot.Drivetrain.DriveMotion;
 @SuppressWarnings("ALL")
 public class Robot extends TimedRobot {
 
-    public class Group{
-
-        //Autonomous Init, Periodic, Tele Int, and Periodic
-
-    }
-    public class group1{
-
-        //Functions
-        //Constructor
-        //Autonomous Init, Periodic, Tele Int, and Periodic
-
-    }
-
-   // private class group(Groups[4]){
-
-   // }
-
-
-  //  public Robot[] GroupRobots [4]{
-
-  //  }
 
     //If mode = 1, Arcade
     //If mode = 2, Tank
     public static int mode = 1;
 
-    //If group = 1, BONK
-    //If group = 2, Thunder Tortoises
-    //If group = 3, Tate & Everyone Else
-    //If group = 4, Error 3100
-    public static int groups;
 
     public static OI oi;
     public static Drive drive;
@@ -56,11 +30,11 @@ public class Robot extends TimedRobot {
     public double pi;
     private boolean ran = false;
 
+
     public static String gameData;
-
-
     private Command autonomousCommand;
-    private SendableChooser <Character> autoSide;
+    private SendableChooser<Character> autoSide;
+    private SendableChooser<Character> autoGroup;
     private SendableChooser<Command> chooser = new SendableChooser<>();
 
 
@@ -76,26 +50,26 @@ public class Robot extends TimedRobot {
         pi = NetworkTable.getTable("SmartDashboard").getDouble("Pi", 0);
 
 
-
-
-
         // ALWAYS INIT OI LAST
         oi = new OI();
 
-        autonomousCommand = new AutonomousMaster(autoSide.getSelected());
 
-        chooser.setDefaultOption("Auto Master", new AutonomousMaster(autoSide.getSelected()));
-        chooser.addOption("Group 1", new DriveMotion());
-        chooser.addOption("Group 2", new DriveMotion());
-        chooser.addOption("Group 3", new DriveMotion());
-        chooser.addOption("Group 4", new DriveMotion());
+        chooser.setDefaultOption("Auto Master", new AutonomousMaster(autoGroup.getSelected(), gameData, autoSide.getSelected()));
+
+
+        autoGroup = new SendableChooser<>();
+        autoGroup.addDefault("Group 1", '1');
+        autoGroup.addObject("Group 2", '2');
+        autoGroup.addObject("Group 3", '3');
+        autoGroup.addObject("Group 4", '4');
+        SmartDashboard.putData("Autonomous", autoGroup);
 
         autoSide = new SendableChooser<>();
-        autoSide.addObject("In Front of Switch", 'O');
-        autoSide.addDefault("To the Side of the Switch",'N');
-        SmartDashboard.putData("Type", autoSide);
+        autoSide.addObject("Left Side", 'L');
+        autoSide.addDefault("Right Side", 'R');
+        SmartDashboard.putData("Side", autoSide);
 
-        SmartDashboard.putData("Auto mode", chooser);
+
         SmartDashboard.putData(drive);
 
     }
@@ -119,23 +93,13 @@ public class Robot extends TimedRobot {
     @Override
     public void autonomousInit() {
 
-        autonomousCommand = new AutonomousMaster(autoSide.getSelected());
-       autonomousCommand.start();
-
-        //Groups[currentGroup].autonomousInit
-
-
-        /*
-         * String autoSelected = SmartDashboard.getString("Auto Selector",
-         * "Default"); switch(autoSelected) { case "My Auto": autonomousCommand
-         * = new MyAutoCommand(); break; case "Default Auto": default:
-         * autonomousCommand = new ExampleCommand(); break; }
-         */
+        autonomousCommand = new AutonomousMaster(autoGroup.getSelected(), gameData, autoSide.getSelected());
+        autonomousCommand.start();
 
 
         // schedule the autonomous command (example)
         if (autonomousCommand != null) {
-           autonomousCommand.start();
+            autonomousCommand.start();
         }
     }
 
@@ -178,7 +142,6 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void testPeriodic() {
-
 
 
     }

@@ -23,7 +23,6 @@ public class DriveMotion extends Command {
     @Override
     protected void execute() {
 
-
         //Checks to see the mode set in Robot, then sets the controls for the Robot
         if (Robot.mode == 1) {
             //Arcade Drive

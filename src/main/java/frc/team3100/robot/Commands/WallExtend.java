@@ -21,6 +21,7 @@ public class WallExtend extends Command {
     //Testing command to run pneumatics
     protected void execute() {
 
+            //Setting piston to extend
             RobotMap.wallPiston.set(true);
 
     }
@@ -28,6 +29,7 @@ public class WallExtend extends Command {
     @Override
     protected void interrupted() {
 
+            //Setting piston to retract
             RobotMap.wallPiston.set(false);
 
     }

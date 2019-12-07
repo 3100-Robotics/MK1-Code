@@ -6,18 +6,18 @@ import frc.team3100.robot.Robot;
 
 import static frc.team3100.robot.Robot.drive;
 
-public class AutoDriveBackward extends Command {
+public class AutoDriveBackwards extends Command {
 
     private double endTime;
     private double driveTime;
 
     private double time;
-    private double time2;
+    private double currentTime;
 
     boolean stop = false;
 
-    //Constructor for AutoDrive, takes in the drive subsystem and writes a time to the smartdashboard
-    public AutoDriveBackward(double seconds) {
+    //Constructor for AutoDrive, takes in the drive subsystem, and sets up driveTime to take in seconds
+    public AutoDriveBackwards(double seconds) {
         super("AutoDriveForward");
         requires(drive);
         driveTime = seconds;
@@ -27,34 +27,46 @@ public class AutoDriveBackward extends Command {
     protected void initialize() {
 
         time -= DriverStation.getInstance().getMatchTime();
-        time2 = (time * 20) / 1000;
-        endTime = time2 + driveTime;
+        currentTime = (time * 20) / 1000;
+        endTime = currentTime + driveTime;
 
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
         time -= DriverStation.getInstance().getMatchTime();
-        time2 = (time * 20) / 1000;
-        System.out.println(time2);
+        currentTime = (time * 20) / 1000;
+      //  System.out.println(time2);
 
-
+        //Asking if you want the robot in Tank Drive or Arcade Drive
         if (Robot.mode == 1) {
-            if(time2 < endTime) {
+            if(currentTime < endTime) {
                drive.arcadeDrive(-1, 0);
+            } else {
+                stop = true;
+                System.out.println("Done Driving Backwards");
             }
 
         } else if (Robot.mode == 2) {
-            if(time2 < endTime) {
+            if(currentTime < endTime) {
                 drive.tankDrive(-1, -1);
+            }else {
+                stop = true;
+                System.out.println("Done Driving Backwards");
             }
+        }else{
+            System.out.println("No Mode Selected");
         }
 
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-            return false;
+            if(stop == true){
+                return true;
+            }else{
+                return false;
+            }
     }
 
     // Called once after isFinished returns true

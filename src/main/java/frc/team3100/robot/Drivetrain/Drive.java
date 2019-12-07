@@ -52,7 +52,7 @@ public class Drive extends Subsystem {
     //Tank Drive, one Joystick controls the left, one controls the right.
     public void tankDrive(double leftSpeed, double rightSpeed) {
 
-
+        //Limits for speed, using quadratics and max/min
         leftSpeed = deadband(leftSpeed);
         rightSpeed = deadband(rightSpeed);
 
@@ -62,6 +62,7 @@ public class Drive extends Subsystem {
         leftSpeed *= limitSpeed * leftSpeed;
         rightSpeed *= limitRotate * rightSpeed;
 
+        //Tells the program to run the driveTank
         differentialDrive.tankDrive(leftSpeed, rightSpeed);
 
     }

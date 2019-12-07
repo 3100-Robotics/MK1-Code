@@ -1,7 +1,10 @@
 package frc.team3100.robot.Commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import frc.team3100.robot.OI;
+import frc.team3100.robot.Robot;
 import frc.team3100.robot.RobotMap;
+
 
 public class MotorRun extends Command {
 
@@ -14,16 +17,41 @@ public class MotorRun extends Command {
 
         if (RobotMap.techControls.getButtonB()) {
 
-            RobotMap.auxMotor.set(-0.8);
-            RobotMap.auxMotor2.set(-0.8);
+            //Sets the motors to specific speeds
+            RobotMap.auxMotor.set(-0.35); //Top Motor 0.35
+            RobotMap.auxMotor2.set(-1); //Bottom Motor 1
+            Robot.oi.motorRan = true;
+
+        }else if(RobotMap.techControls.getButtonX()) {
+
+            RobotMap.auxMotor.set(0.4);
+            RobotMap.auxMotor2.set(0.4);
+
+        }else if (RobotMap.techControls.getButtonY()) {
+
+            //Sets the motors to specific speeds
+            RobotMap.auxMotor.set(-0.7);//Top
+            RobotMap.auxMotor2.set(-0.4);//Bottom
 
         } else {
 
+            //Tells the motors not to run if they're on activated
             RobotMap.auxMotor.set(0);
             RobotMap.auxMotor2.set(0);
 
         }
 
+    }
+
+    protected void end() {
+
+        RobotMap.auxMotor.set(0);
+        RobotMap.auxMotor2.set(0);
+
+    }
+
+    protected void interrupted() {
+        end();
     }
 
     @Override

@@ -1,76 +1,103 @@
 package frc.team3100.robot;
 
-import edu.wpi.cscore.CvSink;
-import edu.wpi.cscore.CvSource;
-import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team3100.robot.Autonomous.AutoDriveForward;
 import frc.team3100.robot.Autonomous.AutonomousMaster;
 import frc.team3100.robot.Drivetrain.Drive;
 import frc.team3100.robot.Drivetrain.DriveMotion;
-import frc.team3100.robot.Commands.WallExtend;
-import org.opencv.core.Mat;
-import org.opencv.imgproc.Imgproc;
-
-import static edu.wpi.first.wpilibj.Timer.getMatchTime;
+//Group Functions
+//Calls a calls that has everything the group has control over, defines the group
 
 
-
+@SuppressWarnings("ALL")
 public class Robot extends TimedRobot {
 
-       // public static double time = 0;
+    public class Group{
+
+        //Autonomous Init, Periodic, Tele Int, and Periodic
+
+    }
+    public class group1{
+
+        //Functions
+        //Constructor
+        //Autonomous Init, Periodic, Tele Int, and Periodic
+
+    }
+
+   // private class group(Groups[4]){
+
+   // }
+
+
+  //  public Robot[] GroupRobots [4]{
+
+  //  }
 
     //If mode = 1, Arcade
     //If mode = 2, Tank
     public static int mode = 1;
 
+    //If group = 1, BONK
+    //If group = 2, Thunder Tortoises
+    //If group = 3, Tate & Everyone Else
+    //If group = 4, Error 3100
+    public static int groups;
+
     public static OI oi;
     public static Drive drive;
-  //  public static WallExtend wallextend;
 
+    public double pi;
+    private boolean ran = false;
+
+    public static String gameData;
 
 
     private Command autonomousCommand;
+    private SendableChooser <Character> autoSide;
     private SendableChooser<Command> chooser = new SendableChooser<>();
 
+
     @Override
+    //Initalizing
     public void robotInit() {
 
         drive = new Drive();
         CameraServer.getInstance().startAutomaticCapture();
+        gameData = DriverStation.getInstance().getGameSpecificMessage();
 
-       /* new Thread(() -> {
-            UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
-            camera.setResolution(640, 480);
+        NetworkTable.getTable("SmartDashboard").putDouble("Pi", 3);
+        pi = NetworkTable.getTable("SmartDashboard").getDouble("Pi", 0);
 
-            CvSink cvSink = CameraServer.getInstance().getVideo();
-            CvSource outputStream = CameraServer.getInstance().putVideo("Blur", 640, 480);
 
-            Mat source = new Mat();
-            Mat output = new Mat();
 
-            while(!Thread.interrupted()) {
-                cvSink.grabFrame(source);
-                Imgproc.cvtColor(source, output, Imgproc.COLOR_BGR2GRAY);
-                outputStream.putFrame(output);
-            }
-        }).start();
-*/
 
-        autonomousCommand = new AutonomousMaster();
+
         // ALWAYS INIT OI LAST
         oi = new OI();
 
-        chooser.setDefaultOption("Auto Master", new AutonomousMaster());
-        chooser.addOption("Teleop Drive", new DriveMotion());
+        autonomousCommand = new AutonomousMaster(autoSide.getSelected());
+
+        chooser.setDefaultOption("Auto Master", new AutonomousMaster(autoSide.getSelected()));
+        chooser.addOption("Group 1", new DriveMotion());
+        chooser.addOption("Group 2", new DriveMotion());
+        chooser.addOption("Group 3", new DriveMotion());
+        chooser.addOption("Group 4", new DriveMotion());
+
+        autoSide = new SendableChooser<>();
+        autoSide.addObject("In Front of Switch", 'O');
+        autoSide.addDefault("To the Side of the Switch",'N');
+        SmartDashboard.putData("Type", autoSide);
+
         SmartDashboard.putData("Auto mode", chooser);
+        SmartDashboard.putData(drive);
+
     }
 
     /**
@@ -91,7 +118,12 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
-        autonomousCommand = chooser.getSelected();
+
+        autonomousCommand = new AutonomousMaster(autoSide.getSelected());
+       autonomousCommand.start();
+
+        //Groups[currentGroup].autonomousInit
+
 
         /*
          * String autoSelected = SmartDashboard.getString("Auto Selector",
@@ -103,7 +135,7 @@ public class Robot extends TimedRobot {
 
         // schedule the autonomous command (example)
         if (autonomousCommand != null) {
-            autonomousCommand.start();
+           autonomousCommand.start();
         }
     }
 
@@ -113,15 +145,16 @@ public class Robot extends TimedRobot {
     @Override
     public void autonomousPeriodic() {
 
-
-
-
         Scheduler.getInstance().run();
 
     }
 
     @Override
     public void teleopInit() {
+
+        autonomousCommand.cancel();
+
+
         // This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to
         // continue until interrupted by another command, remove
@@ -129,6 +162,7 @@ public class Robot extends TimedRobot {
         if (autonomousCommand != null) {
             autonomousCommand.cancel();
         }
+
     }
 
     /**
@@ -144,6 +178,8 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void testPeriodic() {
+
+
 
     }
 }

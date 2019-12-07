@@ -56,7 +56,7 @@ public class RobotMap {
     public static Spark auxMotor = new Spark(auxMotorChannel);
     public static Spark auxMotor2 = new Spark(auxMotorChannel2);
 
-    public static Solenoid wallPiston = new Solenoid( 41, pistonChannel1);
+    public static Solenoid wallPiston = new Solenoid(41, pistonChannel1);
 
 
         }

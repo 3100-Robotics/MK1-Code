@@ -9,9 +9,6 @@ import frc.team3100.robot.RobotMap;
 //DriveMotion is a command that is used to run the drivetrain
 public class DriveMotion extends Command {
 
-    public double time;
-    public double time2;
-
     public DriveMotion() {
         super("DriveMotion");
         requires(Robot.drive);
@@ -25,13 +22,6 @@ public class DriveMotion extends Command {
 
     @Override
     protected void execute() {
-
-
-        time -= DriverStation.getInstance().getMatchTime();
-        time2 = (time * 20) / 1000;
-
-       // System.out.println((time * 20) / 1000);
-        System.out.println(time2);
 
 
         //Checks to see the mode set in Robot, then sets the controls for the Robot

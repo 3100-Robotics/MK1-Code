@@ -9,6 +9,12 @@ import frc.team3100.robot.RobotMap;
 //DriveMotion is a command that is used to run the drivetrain
 public class DriveMotion extends Command {
 
+    private double endTime;
+    private double driveTime;
+
+    private double time;
+    private double currentTime;
+
     public DriveMotion() {
         super("DriveMotion");
         requires(Robot.drive);
@@ -17,6 +23,7 @@ public class DriveMotion extends Command {
 
     @Override
     protected void initialize() {
+
 
     }
 

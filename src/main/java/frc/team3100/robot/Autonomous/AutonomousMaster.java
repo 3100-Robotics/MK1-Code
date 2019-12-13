@@ -1,6 +1,7 @@
 package frc.team3100.robot.Autonomous;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import edu.wpi.first.wpilibj.command.WaitCommand;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team3100.robot.Robot;
 
@@ -20,6 +21,9 @@ addSequential(new AutoDriveRight(SECONDS));
 
 TO TURN LEFT:
 addSequential(new AutoDriveLeft(SECONDS));
+
+TO WAIT:
+addSequential(new WaitCommand(SECONDS));
 */
 
     //Master grouping for all of the autonomous commands, used to sequence the commands in order
@@ -36,9 +40,13 @@ addSequential(new AutoDriveLeft(SECONDS));
         if (autoGroup == '1') {
             if (autoSide == 'R') {
 
+                //Drive Forward
+                addSequential(new AutoDriveForward(1.5));
 
             } else if (autoSide == 'L') {
 
+                //Drive Forward
+                addSequential(new AutoDriveForward(1.5));
 
             }
 
@@ -46,40 +54,77 @@ addSequential(new AutoDriveLeft(SECONDS));
 
         //GROUP 2 - TT
         else if (autoGroup == '2') {
-            if (autoSide == 'R') {
+                if (autoSide == 'R') {
 
-                addSequential(new AutoDriveForward(2));
-                addSequential(new AutoDriveRight(2));
-                addSequential(new AutoDriveForward(4));
-                addSequential(new AutoDriveLeft(2));
-                addSequential(new AutoDriveForward(1));
+                    //Go straight, turn right, go forward, turn left, stop - To Advanced Industrial
+                    addSequential(new AutoDriveForward(1.55));
+                    addSequential(new AutoDriveRight(0.52));
+                    addSequential(new AutoDriveForward(2.9));
+                    addSequential(new AutoDriveLeft(0.21));
+                    addSequential(new AutoDriveForward(1));
 
 
-            } else if (autoSide == 'L') {
 
-                addSequential(new AutoDriveForward(2));
-                addSequential(new AutoDriveLeft(2));
-                addSequential(new AutoDriveForward(4));
-                addSequential(new AutoDriveRight(2));
-                addSequential(new AutoDriveForward(1));
+                } else if (autoSide == 'L') {
 
+                    //Go straight, turn left, go forward, turn right, stop - To Advanced Industrial
+
+                    addSequential(new AutoDriveForward(1.55));
+                    addSequential(new AutoDriveLeft(0.52));
+                    addSequential(new AutoDriveForward(2.9));
+                    addSequential(new AutoDriveRight(0.21));
+                    addSequential(new AutoDriveForward(1));
+
+
+                }
             }
 
             //GROUP 3 - T&EE
-        } else if (autoGroup == '3') {
+         else if (autoGroup == '3') {
             if (autoSide == 'R') {
+
+                //Goto Industrial Zone
+
+                addSequential(new AutoDriveForward(1.45));
+                addSequential(new AutoDriveRight(0.58));
+                addSequential(new AutoDriveForward(3));
 
             } else if (autoSide == 'L') {
 
+                //Goto Industrial Zone
+
+                addSequential(new AutoDriveForward(1.45));
+                addSequential(new AutoDriveLeft(0.58));
+                addSequential(new AutoDriveForward(3));
+
             }
 
-            //GROUP 3 - E3100
+            //GROUP 4 - E3100
         } else if (autoGroup == '4') {
             if (autoSide == 'R') {
 
+                //Goto Industrial Zone
+
+                addSequential(new AutoDriveForward(1.45));
+                addSequential(new AutoDriveRight(0.58));
+                addSequential(new AutoDriveForward(3));
+
             } else if (autoSide == 'L') {
 
+                //Goto Industrial Zone
+
+                addSequential(new AutoDriveForward(1.45));
+                addSequential(new AutoDriveLeft(0.58));
+                addSequential(new AutoDriveForward(3));
+
             }
+
+        }else if (autoGroup == '5'){
+
+             //Testing
+            addSequential(new AutoDriveRight(0.65));
+            addSequential(new AutoDriveForward(1.45));
+            addSequential(new AutoDriveLeft(0.58));
 
         }
 

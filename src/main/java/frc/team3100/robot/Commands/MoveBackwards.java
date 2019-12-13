@@ -8,7 +8,7 @@ import static frc.team3100.robot.Robot.drive;
 
 public class MoveBackwards extends Command {
 
-    int time;
+    int time = 0;
     int currentTime;
 
 
@@ -19,7 +19,7 @@ public class MoveBackwards extends Command {
 
     }
 
-    //Testing command to run pneumatics
+
     protected void execute() {
 
         if (RobotMap.techControls.getButtonA()) {

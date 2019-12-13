@@ -10,12 +10,11 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team3100.robot.Autonomous.AutonomousMaster;
 import frc.team3100.robot.Drivetrain.Drive;
-import frc.team3100.robot.Drivetrain.DriveMotion;
-//Group Functions
-//Calls a calls that has everything the group has control over, defines the group
+
 
 
 @SuppressWarnings("ALL")
+//Main class where everything is defined
 public class Robot extends TimedRobot {
 
 
@@ -24,6 +23,7 @@ public class Robot extends TimedRobot {
     public static int mode = 1;
 
 
+    //Defining Subsystems
     public static OI oi;
     public static Drive drive;
 
@@ -31,6 +31,8 @@ public class Robot extends TimedRobot {
     private boolean ran = false;
 
 
+    //Commands to be used later
+    public static boolean autoVal;
     public static String gameData;
     private Command autonomousCommand;
     private SendableChooser<Character> autoSide;
@@ -42,26 +44,35 @@ public class Robot extends TimedRobot {
     //Initalizing
     public void robotInit() {
 
+
+        //Initalizes the drive subsystem
         drive = new Drive();
+        //Sets up the camera
         CameraServer.getInstance().startAutomaticCapture();
+        //Gets what type of game is being played, not that important
         gameData = DriverStation.getInstance().getGameSpecificMessage();
 
+        //Testing Features - Ignore
         NetworkTable.getTable("SmartDashboard").putDouble("Pi", 3);
         pi = NetworkTable.getTable("SmartDashboard").getDouble("Pi", 0);
 
 
         // ALWAYS INIT OI LAST
-        oi = new OI();
+
+       // chooser.setDefaultOption("Auto Master", new AutonomousMaster(autoGroup.getSelected(), gameData, autoSide.getSelected()));
+
+     //   autonomousCommand = new AutonomousMaster(autoGroup.getSelected(), gameData, autoSide.getSelected());
+
+        //Autonomous Master Class
 
 
-        chooser.setDefaultOption("Auto Master", new AutonomousMaster(autoGroup.getSelected(), gameData, autoSide.getSelected()));
-
-
+        //Options in the Smartdashboard
         autoGroup = new SendableChooser<>();
         autoGroup.addDefault("Group 1", '1');
         autoGroup.addObject("Group 2", '2');
         autoGroup.addObject("Group 3", '3');
         autoGroup.addObject("Group 4", '4');
+        autoGroup.addObject("Test 5", '5');
         SmartDashboard.putData("Autonomous", autoGroup);
 
         autoSide = new SendableChooser<>();
@@ -71,6 +82,7 @@ public class Robot extends TimedRobot {
 
 
         SmartDashboard.putData(drive);
+        oi = new OI();
 
     }
 
@@ -95,12 +107,13 @@ public class Robot extends TimedRobot {
 
         autonomousCommand = new AutonomousMaster(autoGroup.getSelected(), gameData, autoSide.getSelected());
         autonomousCommand.start();
-
+        //Tells the autonomous command to run
+        autoVal = true;
 
         // schedule the autonomous command (example)
-        if (autonomousCommand != null) {
-            autonomousCommand.start();
-        }
+       // if (autonomousCommand != null) {
+    //        autonomousCommand.start();
+    //    }
     }
 
     /**
@@ -116,16 +129,22 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopInit() {
 
-        autonomousCommand.cancel();
+        if(autoVal) {
+            if(autonomousCommand.isRunning()) {
+                autonomousCommand.cancel();
+            }
+        }
+        autoVal = false;
+       // autonomousCommand.cancel();
 
 
         // This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to
         // continue until interrupted by another command, remove
         // this line or comment it out.
-        if (autonomousCommand != null) {
-            autonomousCommand.cancel();
-        }
+      //  if (autonomousCommand != null) {
+     //       autonomousCommand.cancel();
+     //   }
 
     }
 

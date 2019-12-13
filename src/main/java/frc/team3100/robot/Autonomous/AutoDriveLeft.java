@@ -30,25 +30,26 @@ public class AutoDriveLeft extends Command {
         currentTime = (time * 20) / 1000;
         endTime = currentTime + driveTime;
 
+
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
         time -= DriverStation.getInstance().getMatchTime();
         currentTime = (time * 20) / 1000;
-      //  System.out.println(time2);
+        System.out.println(currentTime);
 
         //Asking if you want the robot in Tank Drive or Arcade Drive
         if (Robot.mode == 1) {
-            if(currentTime < endTime) {
-               drive.arcadeDrive(0, -1);
+            if(endTime > currentTime) {
+                drive.arcadeDrive(0, 1);
             } else {
                 stop = true;
-                System.out.println("Done Driving Left");
+                System.out.println("Done Driving Forward");
             }
 
         } else if (Robot.mode == 2) {
-            if(currentTime < endTime) {
+            if(currentTime > endTime) {
                 drive.tankDrive(-1, 1);
             }else {
                 stop = true;
@@ -62,11 +63,7 @@ public class AutoDriveLeft extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-            if(stop == true){
-                return true;
-            }else{
-                return false;
-            }
+        return stop == true;
     }
 
     // Called once after isFinished returns true

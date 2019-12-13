@@ -18,12 +18,13 @@ public class MotorRun extends Command {
     //Testing command to run motors
     protected void execute() {
 
+        //Big file to use motors
         if (RobotMap.techControls.getButtonB()) {
 
             //Sets the motors to specific speeds
             RobotMap.auxMotor.set(-0.35); //Top Motor 0.35
             RobotMap.auxMotor2.set(-1); //Bottom Motor 1
-            Robot.oi.motorRan = true;
+
 
         }else if(RobotMap.techControls.getButtonX()) {
 
@@ -37,7 +38,12 @@ public class MotorRun extends Command {
             RobotMap.auxMotor.set(-0.7);//Top
             RobotMap.auxMotor2.set(-0.4);//Bottom
 
-        } else {
+        }else if (RobotMap.techControls.getLeftBumper()){
+
+            RobotMap.auxMotor.set(-1);
+            RobotMap.auxMotor2.set(-1);
+
+        }else {
 
             //Tells the motors not to run if they're on activated
             RobotMap.auxMotor.set(0);

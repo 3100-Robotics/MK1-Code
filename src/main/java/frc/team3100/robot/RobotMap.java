@@ -44,6 +44,7 @@ public class RobotMap {
 
     private static int PCM1Channel = 41;
     private static int pistonChannel1 = 4;
+    private static int pistonChannel2 = 7;
 
 
     //INIT
@@ -56,7 +57,9 @@ public class RobotMap {
     public static Spark auxMotor = new Spark(auxMotorChannel);
     public static Spark auxMotor2 = new Spark(auxMotorChannel2);
 
-    public static Solenoid wallPiston = new Solenoid(41, pistonChannel1);
-
+    public static Solenoid wallPiston = new Solenoid(pistonChannel1);
+    public static Solenoid testPiston = new Solenoid(41,6);
+    public static Solenoid secondPiston = new Solenoid(pistonChannel2);
+    public static Solenoid test1Piston = new Solenoid(41,5);
 
         }

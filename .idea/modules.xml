@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MK1-Code.iml" filepath="$PROJECT_DIR$/.idea/modules/MK1-Code.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MK1-Code.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MK1-Code.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MK1-Code.test.iml" filepath="$PROJECT_DIR$/.idea/modules/MK1-Code.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ToolchainPlugin/src/main/main1.iml" filepath="$PROJECT_DIR$/ToolchainPlugin/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/MK1-Code - current.iml" filepath="$PROJECT_DIR$/src/MK1-Code - current.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToolchainPlugin/ToolchainPlugin.iml" filepath="$PROJECT_DIR$/ToolchainPlugin/ToolchainPlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vendordeps/src/main/main.iml" filepath="$PROJECT_DIR$/vendordeps/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vendordeps/src/test/test.iml" filepath="$PROJECT_DIR$/vendordeps/src/test/test.iml" />
     </modules>
   </component>
 </project>

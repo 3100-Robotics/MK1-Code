@@ -1,6 +1,7 @@
 package frc.team3100.robot.Drivetrain;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.DemandType;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -14,19 +15,20 @@ import static frc.team3100.robot.RobotMap.rightDriveMotor;
 
 public class Drive extends Subsystem {
 
-     DifferentialDrive differentialDrive = null;
+
+    private double limitSpeed = 0;
+    private double limitRotate = 0;
+
+    private double scaleSpeed;
+    private double scaleRotate;
+
+    private double moveAccelerationLimit = 0.05;
+    private double rotateAccelerationLimit = 0.08; //Velocity - Tune for different drivetrain, if it's too low, sluggish
 
 
-    private double limitSpeed = 1;
-    private double limitRotate = 1;
-
-    public int storedValLeft = 0;
-    public int storedValRight = 0;
 
     public Drive() {
         super("Drive");
-
-        differentialDrive = new DifferentialDrive(leftDriveMotor, rightDriveMotor);
     }
 
     //Arcade Drive, one Joystick controls forwards/backwards, the other controls turning
@@ -36,17 +38,40 @@ public class Drive extends Subsystem {
         moveSpeed = deadband(moveSpeed);
         rotateSpeed = deadband(rotateSpeed);
 
-        limitSpeed = moveSpeed < 0 ? -0.9 : 0.9;
-        limitRotate = rotateSpeed < 0 ? -0.8 : 0.8;
+        scaleSpeed = moveSpeed < 0 ? -0.7 : 0.7;
+        scaleRotate = rotateSpeed < 0 ? -0.6 : 0.6;
 
-        moveSpeed *= limitSpeed * moveSpeed;
-        rotateSpeed *= limitRotate * rotateSpeed;
+        moveSpeed *= scaleSpeed * moveSpeed;
+        rotateSpeed *= scaleRotate * rotateSpeed;
 
-        moveSpeed = Math.pow(moveSpeed, 3);
 
-        //Tells the program to run the driveArcade
-        differentialDrive.arcadeDrive(moveSpeed, rotateSpeed);
+        //Acceleration Curve, takes the difference of the input value and a limited value
+        //Checks to see if it's greater than the limit for acceleration
 
+        // M O V E
+       if(moveSpeed - limitSpeed > moveAccelerationLimit){
+           limitSpeed += moveAccelerationLimit;
+       }else if (moveSpeed - limitSpeed < -moveAccelerationLimit){
+           limitSpeed -= moveAccelerationLimit;
+       }else if (moveSpeed - limitSpeed <= moveAccelerationLimit){
+           limitSpeed = moveSpeed;
+       }
+
+
+       //R O T A T E
+        if(rotateSpeed - limitRotate > rotateAccelerationLimit){
+            limitRotate += rotateAccelerationLimit;
+        }else if (rotateSpeed - limitRotate < -rotateAccelerationLimit){
+            limitRotate -= rotateAccelerationLimit;
+        }else if (rotateSpeed - limitRotate <= rotateAccelerationLimit){
+            limitRotate = rotateSpeed;
+        }
+
+
+
+
+        RobotMap.leftDriveMotor.set(ControlMode.PercentOutput, -limitRotate, DemandType.ArbitraryFeedForward, limitSpeed);
+        RobotMap.rightDriveMotor.set(ControlMode.PercentOutput, +limitRotate, DemandType.ArbitraryFeedForward, limitSpeed);
 
     }
     //Tank Drive, one Joystick controls the left, one controls the right.
@@ -63,7 +88,9 @@ public class Drive extends Subsystem {
         rightSpeed *= limitRotate * rightSpeed;
 
         //Tells the program to run the driveTank
-        differentialDrive.tankDrive(leftSpeed, rightSpeed);
+      //  differentialDrive.tankDrive(leftSpeed, rightSpeed);
+        RobotMap.rightDriveMotor.set(ControlMode.PercentOutput,rightSpeed);
+        RobotMap.leftDriveMotor.set(ControlMode.PercentOutput,leftSpeed);
 
     }
 

@@ -34,8 +34,7 @@ public class MoveBackwards extends Command {
             }else if(Robot.mode == 2){
 
                 drive.tankDrive(1,1);
-                RobotMap.leftDriveMotor.setExpiration(1);
-                RobotMap.rightDriveMotor.setExpiration(1);
+
 
             }
 

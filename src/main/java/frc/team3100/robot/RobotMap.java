@@ -1,5 +1,7 @@
 package frc.team3100.robot;
 
+import com.ctre.phoenix.motorcontrol.can.TalonFX;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Spark;
 
@@ -52,14 +54,14 @@ public class RobotMap {
     public static XBoxStates driveControls = new XBoxStates(driveControlsChannel);
     public static XBoxStates techControls = new XBoxStates(techControlsChannel);
 
-    public static Spark leftDriveMotor = new Spark(driveLeft1Channel);
-    public static Spark rightDriveMotor = new Spark(driveRight1Channel);
+    public static TalonFX leftDriveMotor = new TalonFX(driveLeft1Channel);
+    public static TalonFX rightDriveMotor = new TalonFX(driveRight1Channel);
     public static Spark auxMotor = new Spark(auxMotorChannel);
     public static Spark auxMotor2 = new Spark(auxMotorChannel2);
 
-    public static Solenoid wallPiston = new Solenoid(pistonChannel1);
+    public static Solenoid wallPiston = new Solenoid(41, pistonChannel1);
     public static Solenoid testPiston = new Solenoid(41,6);
-    public static Solenoid secondPiston = new Solenoid(pistonChannel2);
+    public static Solenoid secondPiston = new Solenoid(41, pistonChannel2);
     public static Solenoid test1Piston = new Solenoid(41,5);
 
         }

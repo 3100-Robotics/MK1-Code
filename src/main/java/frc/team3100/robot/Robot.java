@@ -3,14 +3,13 @@ package frc.team3100.robot;
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.command.Scheduler;
+
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team3100.robot.Autonomous.AutonomousMaster;
-import frc.team3100.robot.Drivetrain.Drive;
 
+import frc.team3100.robot.Drivetrain.Drive;
+import frc.team3100.robot.Shooter.Shooter;
 
 
 @SuppressWarnings("ALL")
@@ -26,6 +25,8 @@ public class Robot extends TimedRobot {
     //Defining Subsystems
     public static OI oi;
     public static Drive drive;
+    public static Shooter shooter;
+    public static SpeedControllerSetUp speedcontrollersetup;
 
     public double pi;
     private boolean ran = false;
@@ -34,10 +35,10 @@ public class Robot extends TimedRobot {
     //Commands to be used later
     public static boolean autoVal;
     public static String gameData;
-    private Command autonomousCommand;
+    //private Command autonomousCommand;
     private SendableChooser<Character> autoSide;
     private SendableChooser<Character> autoGroup;
-    private SendableChooser<Command> chooser = new SendableChooser<>();
+  //  private SendableChooser<Command> chooser = new SendableChooser<>();
 
 
     @Override
@@ -47,8 +48,12 @@ public class Robot extends TimedRobot {
 
         //Initalizes the drive subsystem
         drive = new Drive();
+        shooter = new Shooter();
+
+
         //Sets up the camera
         CameraServer.getInstance().startAutomaticCapture();
+        //For limelight, use 10.31.0.11:5801
         //Gets what type of game is being played, not that important
         gameData = DriverStation.getInstance().getGameSpecificMessage();
 
@@ -81,8 +86,10 @@ public class Robot extends TimedRobot {
         SmartDashboard.putData("Side", autoSide);
 
 
-        SmartDashboard.putData(drive);
+       // SmartDashboard.putData(drive);
         oi = new OI();
+        new SpeedControllerSetUp().configure();
+
 
     }
 
@@ -96,17 +103,17 @@ public class Robot extends TimedRobot {
 
     }
 
-    @Override
-    public void disabledPeriodic() {
-        Scheduler.getInstance().run();
-    }
+ //   @Override
+  //  public void disabledPeriodic() {
+   //     Scheduler.getInstance().run();
+  //  }
 
 
     @Override
     public void autonomousInit() {
 
-        autonomousCommand = new AutonomousMaster(autoGroup.getSelected(), gameData, autoSide.getSelected());
-        autonomousCommand.start();
+     //   autonomousCommand = new AutonomousMaster(autoGroup.getSelected(), gameData, autoSide.getSelected());
+     //   autonomousCommand.start();
         //Tells the autonomous command to run
         autoVal = true;
 
@@ -122,7 +129,7 @@ public class Robot extends TimedRobot {
     @Override
     public void autonomousPeriodic() {
 
-        Scheduler.getInstance().run();
+      //  Scheduler.getInstance().run();
 
     }
 
@@ -130,11 +137,11 @@ public class Robot extends TimedRobot {
     public void teleopInit() {
 
         if(autoVal) {
-            if(autonomousCommand.isRunning()) {
-                autonomousCommand.cancel();
+      //      if(autonomousCommand.isRunning()) {
+      //          autonomousCommand.cancel();
             }
         }
-        autoVal = false;
+      //  autoVal = false;
        // autonomousCommand.cancel();
 
 
@@ -151,10 +158,10 @@ public class Robot extends TimedRobot {
     /**
      * This function is called periodically during operator control.
      */
-    @Override
-    public void teleopPeriodic() {
-        Scheduler.getInstance().run();
-    }
+   // @Override
+  //  public void teleopPeriodic() {
+   //     Scheduler.getInstance().run();
+   // }
 
     /**
      * This function is called periodically during test mode.

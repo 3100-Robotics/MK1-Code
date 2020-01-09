@@ -1,34 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a180812-c5fb-47ea-9508-0bccc63fac44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/dooblePiston.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="21532e2e-0bf5-4436-a322-edc44122dc83" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ToolchainPlugin/ToolchainPlugin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MK1-Code - current.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MK1-Code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Shooter/Shooter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Shooter/ShooterRun.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/SpeedControllerSetUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendordeps/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendordeps/src/test/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/spenc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_ctre_phoenix_api_java_5_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_ctre_phoenix_wpiapi_java_5_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_kauailabs_navx_frc_navx_java_3_1_344.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__edu_wpi_first_cameraserver_cameraserver_java_2019_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__edu_wpi_first_cscore_cscore_java_2019_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__edu_wpi_first_hal_hal_java_2019_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__edu_wpi_first_ntcore_ntcore_java_2019_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__edu_wpi_first_thirdparty_frc2019_opencv_opencv_java_3_4_4_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__edu_wpi_first_wpilibj_wpilibj_java_2019_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__edu_wpi_first_wpiutil_wpiutil_java_2019_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__jaci_jniloader_JNILoader_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__jaci_pathfinder_Pathfinder_FRCSupport_2019_3_06_UNSTABLE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__jaci_pathfinder_Pathfinder_Java_2019_3_06_UNSTABLE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MK1-Code.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MK1-Code.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/MK1-Code.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Autonomous/AutonomousMaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Autonomous/AutonomousMaster.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/MotorRun.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/MotorRun.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/DriveMotion.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/DriveMotion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/OI.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/OI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Robot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/RobotMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/RobotMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/MK1-Code.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/MK1-Code.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveBackwards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveBackwards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveForward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveForward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveLeft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveRight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutonomousMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutonomousMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MotorRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MotorRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PathWeaver/Groups/LeftPS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PathWeaver/Groups/RightPS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PathWeaver/Paths/cargo1.path" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PathWeaver/pathweaver.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Autonomous/AutonomousMaster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/MotorRun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Commands/WallExtend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/Drive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Drivetrain/DriveMotion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/OI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/Robot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/RobotMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/frc/team3100/robot/XBoxStates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/debuginfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/riopartial/MK1-Code.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/riopartial/robot-2019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/MK1-Code.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/MK1-STOLEN.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/robot-2019.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/Pathfinder-CoreJNI-2019.3.06-UNSTABLE-linuxathenadebug.jar_f3f64c8c6d6008b77eaa63d704d91fc0/linuxathena/libpathfinder.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/Pathfinder-CoreJNI-2019.3.06-UNSTABLE-osxx86-64.jar_4af39c12f8c16abee015b897d9023219/osxx86-64/libpathfinder.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/Pathfinder-CoreJNI-2019.3.06-UNSTABLE-windowsx86-64.jar_3828c56db89186a028d19bc04d7ffdf1/windowsx86-64/pathfinder.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/Pathfinder-JNI-2019.3.06-UNSTABLE-linuxathenadebug.jar_ba634836bb2f3c894faed6097f8a58cc/linuxathena/libpathfinderjni.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/Pathfinder-JNI-2019.3.06-UNSTABLE-osxx86-64.jar_a18cb4b674131d4e2923b1e37e1a98c4/osxx86-64/libpathfinderjni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/Pathfinder-JNI-2019.3.06-UNSTABLE-windowsx86-64.jar_e8b50aa2c373669310cc96488491b6ce/windowsx86-64/pathfinderjni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cci-5.12.0-linuxathenadebug.zip_1ded26b6da5402d961c263c7d4d5a873/linux/athena/shared/libCTRE_PhoenixCCI.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cci-5.12.0-windowsx86-64.zip_78194039b44467b04e9aed05589b0ea3/windows/x86-64/shared/CTRE_PhoenixCCI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.1.1-linuxathenadebug.zip_6b786fdd7637ed019311e45ebb6b9d8e/linux/athena/shared/libcscored.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.1.1-linuxathenadebug.zip_6b786fdd7637ed019311e45ebb6b9d8e/linux/athena/shared/libcscorejni.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.1.1-osxx86-64.zip_3952f6882338a397c54eed06a2fcf138/osx/x86-64/shared/libcscore.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.1.1-osxx86-64.zip_3952f6882338a397c54eed06a2fcf138/osx/x86-64/shared/libcscorejni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.2.1-linuxathenadebug.zip_4f45dea3fb847d4ba7b35368ea1072d5/linux/athena/shared/libcscored.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.2.1-linuxathenadebug.zip_4f45dea3fb847d4ba7b35368ea1072d5/linux/athena/shared/libcscorejni.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.2.1-osxx86-64.zip_f23917627c12b48b84c783517552c130/osx/x86-64/shared/libcscore.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.2.1-osxx86-64.zip_f23917627c12b48b84c783517552c130/osx/x86-64/shared/libcscorejni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.4.1-linuxathenadebug.zip_edc06c0f4d1a96e79739850d885b692c/linux/athena/shared/libcscored.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.4.1-linuxathenadebug.zip_edc06c0f4d1a96e79739850d885b692c/linux/athena/shared/libcscorejni.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.4.1-osxx86-64.zip_7d96424ad80b76bb049d3e083365f8e3/osx/x86-64/shared/libcscore.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.4.1-osxx86-64.zip_7d96424ad80b76bb049d3e083365f8e3/osx/x86-64/shared/libcscorejni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.4.1-windowsx86-64.zip_09f258a3cf9de731576d2b9c1fa05a88/windows/x86-64/shared/cscore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/cscore-cpp-2019.4.1-windowsx86-64.zip_09f258a3cf9de731576d2b9c1fa05a88/windows/x86-64/shared/cscorejni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.1.1-linuxathenadebug.zip_034bba773f7f7db9d75c2bd76d92b633/linux/athena/shared/libwpiHald.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.1.1-linuxathenadebug.zip_034bba773f7f7db9d75c2bd76d92b633/linux/athena/shared/libwpiHaljni.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.1.1-osxx86-64.zip_d8517c04700d20c80702ad9d40a8776a/osx/x86-64/shared/libwpiHal.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.1.1-osxx86-64.zip_d8517c04700d20c80702ad9d40a8776a/osx/x86-64/shared/libwpiHaljni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.2.1-linuxathenadebug.zip_76c584b0493ff0500ce1d6f3ef6b735a/linux/athena/shared/libwpiHald.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.2.1-linuxathenadebug.zip_76c584b0493ff0500ce1d6f3ef6b735a/linux/athena/shared/libwpiHaljni.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.2.1-osxx86-64.zip_b1064631b838a5cef9d436f0c6a9b9ba/osx/x86-64/shared/libwpiHal.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.2.1-osxx86-64.zip_b1064631b838a5cef9d436f0c6a9b9ba/osx/x86-64/shared/libwpiHaljni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.4.1-linuxathenadebug.zip_00691c549be86c0d1985658076a87dbd/linux/athena/shared/libwpiHald.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.4.1-linuxathenadebug.zip_00691c549be86c0d1985658076a87dbd/linux/athena/shared/libwpiHaljni.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.4.1-osxx86-64.zip_903a2388bbc3ef61c28599f2d3501161/osx/x86-64/shared/libwpiHal.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.4.1-osxx86-64.zip_903a2388bbc3ef61c28599f2d3501161/osx/x86-64/shared/libwpiHaljni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.4.1-windowsx86-64.zip_5b2e3dfd03a356fef88885faa25af569/windows/x86-64/shared/wpiHal.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/hal-cpp-2019.4.1-windowsx86-64.zip_5b2e3dfd03a356fef88885faa25af569/windows/x86-64/shared/wpiHaljni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.1.1-linuxathenadebug.zip_997b90312d41f81d474de2566dc2fd04/linux/athena/shared/libntcored.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.1.1-linuxathenadebug.zip_997b90312d41f81d474de2566dc2fd04/linux/athena/shared/libntcorejni.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.1.1-osxx86-64.zip_134edc40ce690e6237c8de1f961aaf45/osx/x86-64/shared/libntcore.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.1.1-osxx86-64.zip_134edc40ce690e6237c8de1f961aaf45/osx/x86-64/shared/libntcorejni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.2.1-linuxathenadebug.zip_48965f5151da2472763e382bcfba8499/linux/athena/shared/libntcored.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.2.1-linuxathenadebug.zip_48965f5151da2472763e382bcfba8499/linux/athena/shared/libntcorejni.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.2.1-osxx86-64.zip_6cc8588a75fde8549ce94717e6d9f79c/osx/x86-64/shared/libntcore.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.2.1-osxx86-64.zip_6cc8588a75fde8549ce94717e6d9f79c/osx/x86-64/shared/libntcorejni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.4.1-linuxathenadebug.zip_8e4fb9906836057660b5212b23afd4d4/linux/athena/shared/libntcored.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.4.1-linuxathenadebug.zip_8e4fb9906836057660b5212b23afd4d4/linux/athena/shared/libntcorejni.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.4.1-osxx86-64.zip_285ffdb17393a9f8eec2a2eac0283826/osx/x86-64/shared/libntcore.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.4.1-osxx86-64.zip_285ffdb17393a9f8eec2a2eac0283826/osx/x86-64/shared/libntcorejni.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.4.1-windowsx86-64.zip_de33c981a148fa8ffd8a7969372d470d/windows/x86-64/shared/ntcore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/ntcore-cpp-2019.4.1-windowsx86-64.zip_de33c981a148fa8ffd8a7969372d470d/windows/x86-64/shared/ntcorejni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_calib3dd.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_calib3dd.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_cored.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_cored.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_features2dd.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_features2dd.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_flannd.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_flannd.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_highguid.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_highguid.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_imgcodecsd.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_imgcodecsd.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_imgprocd.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_imgprocd.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_java344.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_java344.so.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_mld.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_mld.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_objdetectd.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_objdetectd.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_photod.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_photod.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_shaped.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_shaped.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_stitchingd.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_stitchingd.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_superresd.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_superresd.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_videod.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_videod.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_videoiod.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_videoiod.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_videostabd.so.3.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-linuxathenadebug.zip_fb1838f89a18efba82e3c679b6ef0c3b/linux/athena/shared/libopencv_videostabd.so.3.4.debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_calib3d.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_core.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_features2d.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_flann.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_highgui.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_imgcodecs.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_imgproc.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_java344.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_ml.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_objdetect.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_photo.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_shape.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_stitching.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_superres.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_video.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_videoio.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-osxx86-64.zip_dedbac496f76dd290da547459dc16ab7/osx/x86-64/shared/libopencv_videostab.3.4.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_calib3d344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_core344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_features2d344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_flann344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_highgui344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_imgcodecs344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_imgproc344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_java344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_ml344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_objdetect344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_photo344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_shape344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_stitching344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_superres344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_video344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_videoio344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/opencv-cpp-3.4.4-4-windowsx86-64.zip_8b328899bdab5d66c9209ca2ee4859ae/windows/x86-64/shared/opencv_videostab344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/wpiutil-cpp-2019.1.1-linuxathenadebug.zip_e009205852b26420bb11324df59a30fc/linux/athena/shared/libwpiutild.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/wpiutil-cpp-2019.1.1-osxx86-64.zip_1bc59f83e33c372bd4a7a80d73829150/osx/x86-64/shared/libwpiutil.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/wpiutil-cpp-2019.2.1-linuxathenadebug.zip_702e83edb6b31c63492aac94ab4313e5/linux/athena/shared/libwpiutild.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/wpiutil-cpp-2019.2.1-osxx86-64.zip_bd04e553049dc984fc5be6ced3b87133/osx/x86-64/shared/libwpiutil.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/wpiutil-cpp-2019.4.1-linuxathenadebug.zip_c2efc78f7d04dada0598f87a51cdefa1/linux/athena/shared/libwpiutild.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/wpiutil-cpp-2019.4.1-osxx86-64.zip_4d2d4bcf92e37f25564de3054849022e/osx/x86-64/shared/libwpiutil.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/wpiutil-cpp-2019.4.1-windowsx86-64.zip_3517c4c77edd720a69d93fa7ac073fd1/windows/x86-64/shared/wpiutil.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/CTRE_PhoenixCCI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/cscore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/cscorejni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/ntcore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/ntcorejni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_calib3d344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_core344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_features2d344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_flann344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_highgui344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_imgcodecs344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_imgproc344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_java344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_ml344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_objdetect344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_photo344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_shape344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_stitching344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_superres344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_video344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_videoio344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/opencv_videostab344.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/pathfinder.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/pathfinderjni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/wpiHal.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/wpiHaljni.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jniExtractDir/wpiutil.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paths/output/cargo1.left.pf1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/paths/output/cargo1.pf1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/paths/output/cargo1.right.pf1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveBackwards.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveForward.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveLeft.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutoDriveRight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/AutonomousMaster.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Autonomous/DriveStraightForXAtY.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MoveBackwards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/MoveBackwards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Commands/dooblePiston.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/Drive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/Drive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/DriveMotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Drivetrain/DriveMotion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/OI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/OI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/Robot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/RobotMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team3100/robot/RobotMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendordeps/PathfinderOLD.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendordeps/Phoenix.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendordeps/Phoenix.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendordeps/navx_frc.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,173 +265,39 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MK1-Code" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MK1-Code" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="F" />
-        <option value="spysh66" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1SwLqVer6TO6d1eVA8BgDBZbYlx" />
+  <component name="ProjectId" id="1W5aBhMsM2PWq2uVpQvT5Zv18YM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../robot-2018" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="frc.team3100.robot.Autonomous" />
-      <recent name="frc.team3100.robot.Groups" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Programming\MK1-Code - current\build" />
+      <recent name="C:\Programming\MK1-Code - current\build\libs" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="frc.team3100.robot" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="gradle " />
-      <command value="gradle gradlew build" />
-      <command value="gradle bui.d" />
-      <command value="gradle build" />
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="frc.team3100.robot.Main" />
-      <module name="main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="frc.team3100.robot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MK1-Code [bui.d]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="bui.d" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="MK1-Code [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="MK1-Code [gradlew build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="gradlew" />
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="MK1-Code" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.MK1-Code [build]" />
-        <item itemvalue="Gradle.MK1-Code [bui.d]" />
-        <item itemvalue="Gradle.MK1-Code [gradlew build]" />
-        <item itemvalue="Gradle.MK1-Code" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -228,184 +316,30 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7a180812-c5fb-47ea-9508-0bccc63fac44" name="Default Changelist" comment="" />
-      <created>1572469902737</created>
+      <changelist id="21532e2e-0bf5-4436-a322-edc44122dc83" name="Default Changelist" comment="" />
+      <created>1578441775755</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572469902737</updated>
+      <updated>1578441775755</updated>
     </task>
-    <task id="LOCAL-00001" summary="Adding Pneumatics">
-      <created>1573084992293</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1573084992293</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Adding Pneumatics">
-      <created>1573085071074</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1573085071074</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Adding Pneumatics">
-      <created>1573085092695</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1573085092695</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Adding Auton">
-      <created>1573769129981</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1573769129981</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Adding Auton">
-      <created>1573769275296</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1573769275296</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Comments">
-      <created>1574204186517</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1574204186517</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Comments">
-      <created>1574204258357</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1574204258357</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Comments">
-      <created>1574204282953</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1574204282953</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Working on Auton">
-      <created>1574292344755</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1574292344755</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Working on Auton">
-      <created>1574292364162</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1574292364162</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Fixing Pneumatics">
-      <created>1574375718461</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1574375718461</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Adding Auton and Drive Controls">
-      <created>1574808454052</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1574808454052</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Adding Camera">
-      <created>1575410586658</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1575410586658</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Added Auton features v1">
-      <created>1575748541410</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1575748541410</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding Pneumatics" />
-    <MESSAGE value="Adding Auton" />
-    <MESSAGE value="Comments" />
-    <MESSAGE value="Working on Auton" />
-    <MESSAGE value="Fixing Pneumatics" />
-    <MESSAGE value="Adding Auton and Drive Controls" />
-    <MESSAGE value="Adding Camera" />
-    <MESSAGE value="Added Auton features v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Auton features v1" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1575753026859">
+    <state x="552" y="200" key="#Project_Structure" timestamp="1578441953838">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="251" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1575753026859" />
-    <state x="782" y="403" width="373" height="282" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576100798085">
+    <state x="552" y="200" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1578441953838" />
+    <state x="811" y="431" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1578445658090">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="782" y="403" width="373" height="282" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1080@0.0.1920.1080" timestamp="1576100798085" />
-    <state x="690" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575742105525">
+    <state x="811" y="431" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1578445658090" />
+    <state x="740" y="297" key="FileChooserDialogImpl" timestamp="1578442051360">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="690" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575742105525" />
-    <state x="644" y="137" key="CommitChangelistDialog2" timestamp="1575757053428">
+    <state x="740" y="297" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1578442051360" />
+    <state x="440" y="116" key="SettingsEditor" timestamp="1578446115273">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="644" y="137" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1575757053428" />
-    <state x="740" y="296" key="FileChooserDialogImpl" timestamp="1576015130059">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="740" y="296" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1576015130059" />
-    <state x="785" y="253" key="RollbackChangesDialog" timestamp="1576189495895">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="785" y="253" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576189495895" />
-    <state x="552" y="263" key="Vcs.Push.Dialog.v2" timestamp="1575757058155">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1575757058155" />
-    <state x="675" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1576272041042">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="675" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576272041042" />
-    <state x="702" y="172" key="refactoring.ChangeSignatureDialog" timestamp="1575750241389">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="702" y="172" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575750241389" />
-    <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1575751013630">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="616" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575751013630" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <default-breakpoints>
-        <breakpoint enabled="true" type="java-exception" />
-      </default-breakpoints>
-    </breakpoint-manager>
+    <state x="440" y="116" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1578446115273" />
   </component>
 </project>

@@ -1,18 +1,19 @@
-package frc.team3100.robot.Drivetrain;
+package frc.team3100.robot.Shooter;
 
-import edu.wpi.first.wpilibj.DriverStation;
+import com.ctre.phoenix.motorcontrol.ControlMode;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team3100.robot.Robot;
 import frc.team3100.robot.RobotMap;
 
 //DriveMotion is a command that is used to run the drivetrain
-public class DriveMotion extends Command {
+public class ShooterRun extends Command {
 
 
-    public DriveMotion() {
-        super("DriveMotion");
-        requires(Robot.drive);
+    public ShooterRun() {
+        super("ShooterRun");
+        requires(Robot.shooter);
 
     }
 
@@ -25,16 +26,9 @@ public class DriveMotion extends Command {
     @Override
     protected void execute() {
 
-        //Checks to see the mode set in Robot, then sets the controls for the Robot
-
-            //Arcade Drive
-        if (Robot.mode == 1){
-
-            Robot.drive.arcadeDrive(-RobotMap.driveControls.getLeftStickY(), -RobotMap.driveControls.getRightStickX());
-
-        }else if (Robot.mode == 2) {
-            Robot.drive.tankDrive(RobotMap.driveControls.getLeftStickY(), -RobotMap.driveControls.getRightStickY());
-        }
+            Robot.shooter.run();
+            RobotMap.leftDriveMotor.set(ControlMode.Velocity, 0.9 * 500.0 * 4096.0 / 600.0);
+        SmartDashboard.putNumber("Speed", RobotMap.leftDriveMotor.getSelectedSensorVelocity(0));
 
     }
 
